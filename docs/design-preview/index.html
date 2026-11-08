@@ -5,29 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Horizonte · vista previa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@600;700&family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;600;700&family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --c-fondo:#F3F5F8;--c-superficie:#FFFFFF;--c-borde:#D9DFE7;
-  --c-texto:#0F1C2E;--c-texto-2:#4A5A70;
-  --c-accion:#2342E0;--c-accion-texto:#FFFFFF;
-  --c-cumplida:#17784F;--c-riesgo:#9A5B00;--c-vencida:#C2321F;
-  --c-cumplida-suave:#E3F2EA;--c-riesgo-suave:#FBF0DD;--c-vencida-suave:#FBE6E2;
+  --c-fondo:#F6F4F8;--c-superficie:#FFFFFF;--c-borde:#E2DCE8;
+  --c-texto:#1E0F2E;--c-texto-2:#5A4E66;
+  --c-accion:#1E0F2E;--c-accion-texto:#FFFFFF;
+  --c-marca:#C8234F;--c-marca-2:#D4702A;
+  --c-cumplida:#17784F;--c-riesgo:#8A6200;--c-vencida:#B3261E;
+  --c-cumplida-suave:#E3F2EA;--c-riesgo-suave:#F8EFD6;--c-vencida-suave:#FAE4E1;
   --c-hoja:#FFFFFF;
-  --f-cifra:"Schibsted Grotesk",system-ui,sans-serif;
+  --f-cifra:"Lexend",system-ui,sans-serif;
   --f-ui:"Source Sans 3",system-ui,sans-serif;
   --f-cita:"Source Serif 4",Georgia,serif;
 }
 .dark{
-  --c-fondo:#0B1524;--c-superficie:#13213A;--c-borde:#24344F;
-  --c-texto:#E8EDF3;--c-texto-2:#A3B1C4;
-  --c-accion:#8FA4FF;--c-accion-texto:#0B1524;
-  --c-cumplida:#5CCB97;--c-riesgo:#F2B54A;--c-vencida:#FF8A78;
-  --c-cumplida-suave:#12332A;--c-riesgo-suave:#3A2A0E;--c-vencida-suave:#3D1B18;
+  --c-fondo:#140A20;--c-superficie:#21132F;--c-borde:#3A2A4A;
+  --c-texto:#F3EEF6;--c-texto-2:#B8ABC6;
+  --c-accion:#F7C6D6;--c-accion-texto:#140A20;
+  --c-marca:#FF7A9C;--c-marca-2:#F59A5B;
+  --c-cumplida:#5CCB97;--c-riesgo:#E9BC4F;--c-vencida:#FF8A78;
+  --c-cumplida-suave:#12332A;--c-riesgo-suave:#3A2E0E;--c-vencida-suave:#3D1B18;
   --c-hoja:#F7F8FA;
 }
 *{box-sizing:border-box;margin:0}
-body{font-family:var(--f-ui);background:#E4E8EE;color:#0F1C2E;padding:40px 24px 64px}
+body{font-family:var(--f-ui);background:#ECE7F0;color:#1E0F2E;padding:40px 24px 64px}
 .intro{max-width:1240px;margin:0 auto 32px}
 .intro h1{font-family:var(--f-cifra);font-size:34px;line-height:40px;font-weight:700}
 .intro p{font-size:17px;line-height:26px;color:#4A5A70;max-width:760px;margin-top:8px}
@@ -38,12 +40,12 @@ body{font-family:var(--f-ui);background:#E4E8EE;color:#0F1C2E;padding:40px 24px 
 .sw{display:flex;gap:8px;flex-wrap:wrap}
 .sw div{width:96px;font-size:13px;line-height:18px}
 .sw i{display:block;height:44px;border-radius:8px;margin-bottom:6px;border:1px solid rgba(0,0,0,.08)}
-.dir.elegida{outline:3px solid #2342E0;outline-offset:-1px}
-.dir .badge{display:inline-flex;gap:6px;align-items:center;font-size:15px;font-weight:600;color:#2342E0}
+.dir.elegida{outline:3px solid #C8234F;outline-offset:-1px}
+.dir .badge{display:inline-flex;gap:6px;align-items:center;font-size:15px;font-weight:600;color:#C8234F}
 .sello{font-family:"IBM Plex Serif",Georgia,serif}
 .phones{display:flex;gap:28px;flex-wrap:wrap;justify-content:center;max-width:1240px;margin:0 auto}
 .phone{width:360px;height:760px;border-radius:36px;background:var(--c-fondo);color:var(--c-texto);
-  border:10px solid #0F1C2E;overflow:hidden;position:relative;display:flex;flex-direction:column}
+  border:10px solid #1E0F2E;overflow:hidden;position:relative;display:flex;flex-direction:column}
 .cap{width:360px;text-align:center;font-size:15px;color:#4A5A70;margin-top:10px}
 .scr{flex:1;overflow:hidden;padding:18px 20px 0}
 .top{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:15px}
@@ -79,12 +81,12 @@ body{font-family:var(--f-ui);background:#E4E8EE;color:#0F1C2E;padding:40px 24px 
 .th{width:44px;height:58px;flex:none;border-radius:3px;background:var(--c-hoja);box-shadow:0 1px 3px rgba(15,28,46,.18);position:relative;opacity:1}
 .th.pend{opacity:.35}
 .th::after{content:"";position:absolute;left:6px;right:6px;top:8px;height:34px;background:repeating-linear-gradient(#C9D1DC 0 2px,transparent 2px 6px)}
-.th.act::before{content:"";position:absolute;left:0;right:0;top:20px;height:14px;background:rgba(35,66,224,.18);z-index:1}
-.th.act{outline:2px solid var(--c-accion);outline-offset:1px}
+.th.act::before{content:"";position:absolute;left:0;right:0;top:20px;height:14px;background:rgba(200,35,79,.18);z-index:1}
+.th.act{outline:2px solid var(--c-marca);outline-offset:1px}
 .grp{font-size:15px;color:var(--c-texto-2);font-weight:600;margin:16px 0 4px;display:flex;justify-content:space-between}
 .hall{padding:10px 0;border-bottom:1px solid var(--c-borde)}
 .hall b{display:block;font-size:17px;line-height:24px;font-weight:600}
-.hall.nueva{background:linear-gradient(90deg,rgba(35,66,224,.08),transparent);margin:0 -20px;padding:10px 20px}
+.hall.nueva{background:linear-gradient(90deg,rgba(200,35,79,.08),transparent);margin:0 -20px;padding:10px 20px}
 .prog{font-size:15px;color:var(--c-texto-2);margin-top:8px;font-variant-numeric:tabular-nums}
 /* paquete */
 .seg{display:flex;gap:4px;margin-top:14px}
@@ -99,8 +101,8 @@ body{font-family:var(--f-ui);background:#E4E8EE;color:#0F1C2E;padding:40px 24px 
 </head>
 <body>
 <section class="intro">
-  <h1>Live Contracts – Contratista · Fase 1</h1>
-  <p>Dos direcciones visuales. Elegimos «Horizonte»: la línea del contrato es el centro de todo y el resto es sobrio. Abajo verás cuatro pantallas clave con datos semilla ficticios.</p>
+  <h1 style="display:flex;align-items:center;gap:12px"><svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#C8234F"/><stop offset="1" stop-color="#D4702A"/></linearGradient></defs><circle cx="24" cy="24" r="19" fill="none" stroke="url(#lg)" stroke-width="5" stroke-dasharray="96 24" transform="rotate(-30 24 24)"/><path d="M10 26h7l4-8 5 14 4-9h8" fill="none" stroke="#1E0F2E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Live</b><span style="font-weight:300">Contracts</span> · Contratista</span></h1>
+  <p>Dos direcciones visuales. Revisión 2: «Horizonte» con la marca LiveContracts. El ciruela es la base, la acción es sobria y el gradiente frambuesa → mandarina vive solo en el tramo recorrido de la Línea del contrato. Abajo verás cinco pantallas clave con datos semilla ficticios.</p>
 </section>
 
 <section class="dirs">
@@ -117,15 +119,20 @@ body{font-family:var(--f-ui);background:#E4E8EE;color:#0F1C2E;padding:40px 24px 
   </article>
   <article class="dir elegida">
     <h2 style="display:flex;justify-content:space-between">B · Horizonte <span class="badge"><svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm45.66 85.66-56 56a8 8 0 0 1-11.32 0l-24-24a8 8 0 0 1 11.32-11.32L112 148.69l50.34-50.35a8 8 0 0 1 11.32 11.32Z"/></svg>Elegida</span></h2>
-    <p class="tag">El contrato como una línea viva en el tiempo. Control y calma, con la plata siempre a la vista.</p>
+    <p class="tag">El contrato como una línea viva en el tiempo, vestida con la marca LiveContracts. Hay cuatro colores de marca y tres de semáforo, que nunca se mezclan.</p>
     <div class="sw">
-      <div><i style="background:#0F1C2E"></i>Noche<br>#0F1C2E</div>
-      <div><i style="background:#F3F5F8"></i>Niebla<br>#F3F5F8</div>
-      <div><i style="background:#2342E0"></i>Cobalto<br>#2342E0</div>
-      <div><i style="background:#17784F"></i>Páramo<br>#17784F</div>
-      <div><i style="background:#9A5B00"></i>Ámbar<br>#9A5B00</div>
-      <div><i style="background:#C2321F"></i>Bermellón<br>#C2321F</div>
+      <div><i style="background:#1E0F2E"></i>Ciruela<br>#1E0F2E</div>
+      <div><i style="background:#F6F4F8"></i>Bruma<br>#F6F4F8</div>
+      <div><i style="background:#C8234F"></i>Frambuesa<br>#C8234F</div>
+      <div><i style="background:#D4702A"></i>Mandarina<br>#D4702A</div>
+      <div><i style="background:linear-gradient(90deg,#C8234F,#D4702A)"></i>Gradiente<br>solo la Línea</div>
     </div>
+    <p class="tag" style="margin:14px 0 8px">Semáforo (ícono + texto, siempre)</p>
+    <div class="sw">
+      <div><i style="background:#17784F"></i>Páramo<br>#17784F</div>
+      <div><i style="background:#8A6200"></i>Ámbar<br>#8A6200</div>
+      <div><i style="background:#B3261E"></i>Ladrillo<br>#B3261E</div>
+</div>
   </article>
 </section>
 
@@ -185,7 +192,7 @@ body{font-family:var(--f-ui);background:#E4E8EE;color:#0F1C2E;padding:40px 24px 
     <dl class="kv"><dt>Periodicidad</dt><dd>Semanal, viernes</dd><dt>Responsable</dt><dd>Sin asignar</dd><dt>Confianza</dt><dd>Alta</dd></dl>
     <button class="btn" style="margin-top:20px">Confirmar</button>
     <div class="row2"><button class="btn sec">Editar</button><button class="btn sec">Descartar</button></div>
-    <p style="text-align:center;margin-top:16px;color:var(--c-accion);font-weight:600">Confirmar las 30 de confianza alta</p>
+    <p style="text-align:center;margin-top:16px;color:var(--c-texto);text-decoration:underline;text-underline-offset:3px;font-weight:600">Confirmar las 30 de confianza alta</p>
   </div>
 </template>
 
@@ -219,20 +226,21 @@ function linea(modo){
   const pagos=[{x:40,e:'ok'},{x:88,e:'ok'},{x:136,e:'ok'},{x:196,e:'riesgo',m:'$4,8M'},{x:262,e:'pend'}];
   const hoy=168, fin=modo==='dibujando'?212:308;
   const col={ok:'var(--c-cumplida)',riesgo:'var(--c-riesgo)',pend:'var(--c-texto-2)'};
-  let s=`<svg viewBox="0 0 ${W} ${H}" aria-hidden="true">`;
-  s+=`<line x1="8" y1="${y}" x2="${Math.min(hoy,fin)}" y2="${y}" stroke="var(--c-texto)" stroke-width="4" stroke-linecap="round"/>`;
-  if(fin>hoy) s+=`<line x1="${hoy}" y1="${y}" x2="${fin}" y2="${y}" stroke="var(--c-texto)" stroke-width="4" stroke-dasharray="6 6" opacity=".55"/>`;
-  s+=`<circle cx="8" cy="${y}" r="5" fill="var(--c-texto)"/>`;
+  const gid='g'+Math.random().toString(36).slice(2,7);
+  let s=`<svg viewBox="0 0 ${W} ${H}" aria-hidden="true"><defs><linearGradient id="${gid}" gradientUnits="userSpaceOnUse" x1="8" x2="${Math.min(hoy,fin)}"><stop offset="0" stop-color="var(--c-marca)"/><stop offset="1" stop-color="var(--c-marca-2)"/></linearGradient></defs>`;
+  s+=`<line x1="8" y1="${y}" x2="${Math.min(hoy,fin)}" y2="${y}" stroke="url(#${gid})" stroke-width="6" stroke-linecap="round"/>`;
+  if(fin>hoy) s+=`<line x1="${hoy}" y1="${y}" x2="${fin}" y2="${y}" stroke="var(--c-texto-2)" stroke-width="3" stroke-dasharray="6 6" opacity=".7"/>`;
+  s+=`<circle cx="8" cy="${y}" r="5" fill="var(--c-marca)"/>`;
   if(modo!=='dibujando') s+=`<circle cx="${fin}" cy="${y}" r="5" fill="none" stroke="var(--c-texto)" stroke-width="2.5"/>`;
-  else s+=`<circle cx="${fin}" cy="${y}" r="7" fill="var(--c-accion)" opacity=".25"/><circle cx="${fin}" cy="${y}" r="4" fill="var(--c-accion)"/>`;
+  else s+=`<circle cx="${fin}" cy="${y}" r="7" fill="var(--c-marca-2)" opacity=".3"/><circle cx="${fin}" cy="${y}" r="4" fill="var(--c-marca-2)"/>`;
   pagos.filter(p=>p.x<=fin).forEach(p=>{
     const c=col[p.e];
     s+=`<rect x="${p.x-6}" y="${y-6}" width="12" height="12" transform="rotate(45 ${p.x} ${y})" fill="${p.e==='ok'?c:'var(--c-fondo)'}" stroke="${c}" stroke-width="2.5"/>`;
     if(p.m) s+=`<text x="${p.x}" y="${y-14}" text-anchor="middle" font-size="13" font-weight="600" fill="var(--c-riesgo)" font-family="Source Sans 3,system-ui">⚠ ${p.m}</text>`;
   });
   if(modo!=='dibujando'){
-    s+=`<line x1="${hoy}" y1="4" x2="${hoy}" y2="${y+14}" stroke="var(--c-accion)" stroke-width="2.5"/>`;
-    s+=`<text x="${hoy-4}" y="${y+30}" text-anchor="end" font-size="13" font-weight="600" fill="var(--c-accion)" font-family="Source Sans 3,system-ui">Hoy</text>`;
+    s+=`<line x1="${hoy}" y1="4" x2="${hoy}" y2="${y+14}" stroke="var(--c-marca)" stroke-width="2.5"/>`;
+    s+=`<text x="${hoy-4}" y="${y+30}" text-anchor="end" font-size="13" font-weight="600" fill="var(--c-marca)" font-family="Source Sans 3,system-ui">Hoy</text>`;
     s+=`<text x="196" y="${y+30}" text-anchor="middle" font-size="13" fill="var(--c-texto-2)" font-family="Source Sans 3,system-ui">30 nov</text>`;
     s+=`<text x="262" y="${y+30}" text-anchor="middle" font-size="13" fill="var(--c-texto-2)" font-family="Source Sans 3,system-ui">31 dic</text>`;
   }

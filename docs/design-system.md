@@ -1,6 +1,6 @@
 # Live Contracts – Contratista · Sistema de diseño
 
-> Fase 1. **Estado: propuesta en espera de aprobación.**
+> Fase 1, **revisión 2: alineada con la marca LiveContracts** (capturas de `cobrav5.netlify.app` del 8 nov 2026).
 > Vista previa navegable: `docs/design-preview/index.html`. Capturas: `docs/design-preview/capturas/`.
 
 Tema emocional: **control, calma y certeza frente al riesgo contractual**. La sensación es tener un copiloto al que no se le escapa nada.
@@ -38,9 +38,36 @@ El contrato como **una línea en el tiempo**, viva, que va del acta de inicio a 
 | Emoción objetivo (calma y control) | Evoca el trámite y la burocracia, justo lo que le da miedo al contratista | Evoca orientación: «sé dónde estoy y qué viene» |
 | Promesa de cobro | El dinero es secundario en la metáfora | Cada pago es un hito visible en la Línea, con su monto |
 | Fintech moderna (referente Robinhood) | Pesada y ornamental | Cifras grandes, una línea protagonista, botones enormes |
-| Semáforo | El rojo lacre del acento choca con «Vencida» | El acento cobalto queda libre de significados de estado |
+| Semáforo | El rojo lacre del acento choca con «Vencida» | El acento (Ciruela) queda libre de significados de estado |
 | Mobile-first en obra | Las pestañas de carpeta no caben en 360 px | Una columna, una línea horizontal desplazable |
 | Riesgo de verse genérica | IBM Plex + sello es un recurso visto en productos «serios» | La Línea como eje de navegación es propia del dominio (plazos) |
+
+### Revisión 2 · Horizonte con la marca LiveContracts
+
+Las capturas de COBRA V5 / LiveContracts muestran una identidad clara:
+- un **ciruela casi negro** en la navegación;
+- un **gradiente frambuesa → mandarina** en el logo (anillo con pulso) y en la cabecera;
+- acentos frambuesa y mandarina en cifras y títulos;
+- fondos con tinte rosado;
+- una geométrica redondeada (tipo Lexend) en el logotipo y los títulos.
+
+Horizonte se queda con su idea (la Línea) y se viste con esa marca:
+
+| De la marca adoptamos | Cómo lo usamos aquí |
+|---|---|
+| Ciruela como color profundo | Texto principal, botón primario y fondo del modo oscuro. Reemplaza al Noche y al Cobalto: **la acción es ciruela**, sobria y con mucho contraste. |
+| Gradiente frambuesa → mandarina | **Un solo lugar:** el tramo recorrido de la Línea del contrato (del acta de inicio a hoy), además del logo. Así, la firma de la marca *es* el progreso del contrato. |
+| Frambuesa | Marcador «Hoy», anillo de foco y momentos de marca. **Nunca** en un estado del semáforo. |
+| Tipografía geométrica de marca | Lexend para títulos y cifras. |
+| Tinte cálido de fondo | Bruma: un gris lavanda muy suave, más calmado que el rosado de la entidad. |
+
+Lo que **no** adoptamos de la interfaz de COBRA (lado entidad), y por qué:
+- **Etiquetas en mayúsculas** («LÍNEA DE ACCIÓN», «DASHBOARD»). El brief las prohíbe, y en el celular del residente cansan. Usamos oraciones.
+- **Cabecera con gradiente en todas las pantallas.** Diluye la firma. Aquí el gradiente vive solo en la Línea y el logo.
+- **Tablero de donas y KPI como inicio.** El contratista empieza en «Hoy», no en indicadores.
+- **Íconos dentro de cuadros rosados en cada campo.** Es ruido visual. Los íconos se reservan para estados y acciones.
+
+Esto mantiene a LiveContracts – Contratista reconocible como hermano de COBRA, pero con una voz propia, la del lado del contratista.
 
 ---
 
@@ -49,46 +76,59 @@ El contrato como **una línea en el tiempo**, viva, que va del acta de inicio a 
 1. **La línea manda.** Toda pantalla responde a «¿dónde estoy en el contrato?». Las obligaciones, pagos y pólizas se ubican en el tiempo del contrato, nunca en un tablero sin fechas.
 2. **Dos voces.** La voz del contrato (serif, citada textual, nunca reescrita) y la nuestra (sans, directa, en segunda persona). El usuario siempre sabe quién habla: el documento o el copiloto.
 3. **Plata primero.** Un riesgo se expresa en lo que bloquea: «Esto frena el pago de noviembre ($ 4.760.000)», no «Obligación 4.2.3 vencida».
-4. **Calma por defecto, alarma con razón.** El bermellón es escaso: como máximo un elemento de alarma destacado por pantalla fuera de las listas. Si todo es urgente, nada lo es.
+4. **Calma por defecto, alarma con razón.** El ladrillo (vencida) es escaso: como máximo un elemento de alarma destacado por pantalla fuera de las listas. Si todo es urgente, nada lo es.
 5. **Prueba a un toque.** Ningún estado aparece sin su porqué. «Cumplida» abre la evidencia y una obligación abre la cláusula resaltada en su página.
 
 ---
 
-## 3. Paleta (Horizonte)
+## 3. Paleta (Horizonte · marca LiveContracts)
 
-Seis colores con nombre. Los neutros intermedios se derivan de Noche y Niebla.
+Hay **cuatro colores de marca** y **tres de semáforo**. Los grupos no se mezclan: un color de marca nunca comunica un estado.
 
-| Nombre | Claro | Oscuro | Rol | Contraste (claro / oscuro sobre fondo) |
+### Marca
+
+| Nombre | Claro | Oscuro | Rol | Contraste (claro / oscuro) |
 |---|---|---|---|---|
-| **Noche** | `#0F1C2E` | `#E8EDF3` (Niebla) | Texto principal, Línea pasada | 17,1 : 1 / 15,6 : 1 |
-| **Niebla** | `#F3F5F8` | `#0B1524` (fondo) · `#13213A` (superficie) | Fondo y superficies | — |
-| **Cobalto** | `#2342E0` | `#8FA4FF` | Acción primaria, «Hoy», la Línea. **Sin significado de estado.** | 7,2 : 1 / 7,8 : 1 |
-| **Páramo** | `#17784F` | `#5CCB97` | Cumplida y paquete completo | 5,5 : 1 / 9,1 : 1 |
-| **Ámbar** | `#9A5B00` | `#F2B54A` | En riesgo | 5,4 : 1 / 10,0 : 1 |
-| **Bermellón** | `#C2321F` | `#FF8A78` | Vencida y error bloqueante | 5,6 : 1 / 8,0 : 1 |
+| **Ciruela** | `#1E0F2E` | `#F3EEF6` como texto · `#140A20` como fondo | Texto principal y **botón primario** (blanco sobre ciruela: 18 : 1). En oscuro, el botón es Rubor `#F7C6D6` con texto ciruela (12,8 : 1). | 18,1 : 1 / 16,8 : 1 |
+| **Bruma** | `#F6F4F8` | `#21132F` (superficie oscura) | Fondo claro, lavanda casi neutro | — |
+| **Frambuesa** | `#C8234F` | `#FF7A9C` | Marcador «Hoy», foco, logo e inicio del gradiente. **Nunca en estados.** | 5,5 : 1 / 7,8 : 1 |
+| **Mandarina** | `#D4702A` (gráfico) | `#F59A5B` | Final del gradiente de la Línea y del logo. **No se usa como texto en claro.** Si hiciera falta, la versión para texto es `#B85A1A` (4,65 : 1). | 3,0 : 1 (gráfico) / 8,8 : 1 |
 
-Neutro de apoyo: **Pizarra** `#4A5A70` / `#A3B1C4` para texto secundario (7,0 : 1 / 8,4 : 1).
+Gradiente de marca: `linear-gradient(90deg, Frambuesa, Mandarina)`. Solo se usa en el tramo recorrido de la Línea y en el logo.
 
-Todos los textos superan **4,5 : 1 (AA)** sobre su fondo. El texto blanco sobre un botón Cobalto da 7,2 : 1.
+### Semáforo
+
+| Nombre | Claro | Oscuro | Estado | Contraste |
+|---|---|---|---|---|
+| **Páramo** | `#17784F` | `#5CCB97` | Cumplida y paquete completo | 5,5 : 1 / 9,6 : 1 |
+| **Ámbar** | `#8A6200` | `#E9BC4F` | En riesgo (más amarillo que la Mandarina para no confundirse) | 5,5 : 1 / 10,8 : 1 |
+| **Ladrillo** | `#B3261E` | `#FF8A78` | Vencida y error bloqueante | 6,5 : 1 / 8,4 : 1 |
+
+Neutro de apoyo: **Pizarra** `#5A4E66` / `#B8ABC6` para texto secundario (7,7 : 1 / 8,9 : 1).
+
+> Frambuesa y Ladrillo son parecidos (contraste 1,19 : 1 entre ellos). Por eso Frambuesa nunca toca un estado. Además, «Vencida» siempre lleva octágono y texto, y «Hoy» es una línea vertical, no un relleno.
 
 ### Tokens
 
 ```css
 :root {
-  --c-fondo: #F3F5F8;      --c-superficie: #FFFFFF;   --c-borde: #D9DFE7;
-  --c-texto: #0F1C2E;      --c-texto-2: #4A5A70;
-  --c-accion: #2342E0;     --c-accion-texto: #FFFFFF;
-  --c-cumplida: #17784F;   --c-riesgo: #9A5B00;       --c-vencida: #C2321F;
-  --c-cumplida-suave: #E3F2EA; --c-riesgo-suave: #FBF0DD; --c-vencida-suave: #FBE6E2;
+  --c-fondo: #F6F4F8;      --c-superficie: #FFFFFF;   --c-borde: #E2DCE8;
+  --c-texto: #1E0F2E;      --c-texto-2: #5A4E66;
+  --c-accion: #1E0F2E;     --c-accion-texto: #FFFFFF;
+  --c-marca: #C8234F;      --c-marca-2: #D4702A;
+  --g-marca: linear-gradient(90deg, var(--c-marca), var(--c-marca-2));
+  --c-cumplida: #17784F;   --c-riesgo: #8A6200;       --c-vencida: #B3261E;
+  --c-cumplida-suave: #E3F2EA; --c-riesgo-suave: #F8EFD6; --c-vencida-suave: #FAE4E1;
   --c-hoja: #FFFFFF;       /* el documento */
-  --foco: 0 0 0 3px var(--c-fondo), 0 0 0 5px var(--c-accion);
+  --foco: 0 0 0 2px var(--c-fondo), 0 0 0 4px var(--c-marca);
 }
 [data-theme="dark"] {
-  --c-fondo: #0B1524;      --c-superficie: #13213A;   --c-borde: #24344F;
-  --c-texto: #E8EDF3;      --c-texto-2: #A3B1C4;
-  --c-accion: #8FA4FF;     --c-accion-texto: #0B1524;
-  --c-cumplida: #5CCB97;   --c-riesgo: #F2B54A;       --c-vencida: #FF8A78;
-  --c-cumplida-suave: #12332A; --c-riesgo-suave: #3A2A0E; --c-vencida-suave: #3D1B18;
+  --c-fondo: #140A20;      --c-superficie: #21132F;   --c-borde: #3A2A4A;
+  --c-texto: #F3EEF6;      --c-texto-2: #B8ABC6;
+  --c-accion: #F7C6D6;     --c-accion-texto: #140A20;
+  --c-marca: #FF7A9C;      --c-marca-2: #F59A5B;
+  --c-cumplida: #5CCB97;   --c-riesgo: #E9BC4F;       --c-vencida: #FF8A78;
+  --c-cumplida-suave: #12332A; --c-riesgo-suave: #3A2E0E; --c-vencida-suave: #3D1B18;
   --c-hoja: #F7F8FA;       /* el papel sigue claro: el contrato se lee como papel */
 }
 ```
@@ -99,7 +139,7 @@ Todos los textos superan **4,5 : 1 (AA)** sobre su fondo. El texto blanco sobre 
 
 | Rol | Familia | Pesos | Uso |
 |---|---|---|---|
-| **Cifras y títulos** | Schibsted Grotesk | 600, 700 | Montos, nombre del contrato, títulos de pantalla. Grotesca de periódico: firme, sin frialdad corporativa. |
+| **Cifras y títulos** | Lexend | 600, 700 | Montos, nombre del contrato, títulos de pantalla. Es la geométrica de la marca LiveContracts (*supuesto: confirmar con el archivo del logo*). Se diseñó para lectura fácil, lo que encaja con «sin sufrir». |
 | **Interfaz** | Source Sans 3 | 400, 600 | Todo el texto de la UI. Numerales tabulares (`font-variant-numeric: tabular-nums`) en fechas, montos de tabla y conteos. **Sin monoespaciada.** |
 | **Voz del contrato** | Source Serif 4 | 400, 400 itálica | Solo para citas textuales de cláusulas y en el visor. Es la «segunda voz» del principio 2. |
 
@@ -107,9 +147,9 @@ Escala (base de 17 px en móvil por legibilidad en campo; razón ≈ 1,25):
 
 | Token | Tamaño / interlínea | Familia | Ejemplo |
 |---|---|---|---|
-| `cifra-xl` | 48 / 52 | Schibsted 700, numerales proporcionales | **$ 4.760.000** en Hoy (los tabulares abren huecos en los puntos de miles a este tamaño) |
-| `titulo-1` | 34 / 40 | Schibsted 700 | «Te faltan 3 cosas para cobrar noviembre» |
-| `titulo-2` | 26 / 32 | Schibsted 600 | Encabezado de sección |
+| `cifra-xl` | 48 / 52 | Lexend 700, numerales proporcionales | **$ 4.760.000** en Hoy (los tabulares abren huecos en los puntos de miles a este tamaño) |
+| `titulo-1` | 34 / 40 | Lexend 700 | «Te faltan 3 cosas para cobrar noviembre» |
+| `titulo-2` | 26 / 32 | Lexend 600 | Encabezado de sección |
 | `titulo-3` | 21 / 28 | Source Sans 600 | Título de tarjeta |
 | `cuerpo-l` | 19 / 28 | Source Sans 400 | Texto destacado y botones grandes |
 | `cuerpo` | 17 / 26 | Source Sans 400 | Texto general |
@@ -146,7 +186,7 @@ Reglas:
              ░░░░ suspensión 12 d ░░░░
 ```
 
-- **Pasado:** trazo sólido (Noche). **Futuro:** trazo discontinuo. **Hoy:** línea vertical Cobalto a toda la altura del componente.
+- **Pasado (recorrido):** trazo de 6 px con el gradiente de marca Frambuesa → Mandarina. Es el único gradiente del producto. **Futuro:** trazo discontinuo Pizarra. **Hoy:** línea vertical Frambuesa a toda la altura, con la etiqueta «Hoy».
 - **Pagos:** rombos con monto encima y estado debajo (ícono + texto en la versión ampliada). Si un pago tiene algo en riesgo, su rombo lleva el ícono de riesgo **y** el texto.
 - **Eventos contractuales:** las suspensiones son una franja rayada bajo la línea. Las prórrogas y adiciones son un tramo punteado (┅) al final, con su etiqueta.
 - **Interacción:** se desplaza horizontalmente en móvil (con *snap* por mes) y con las flechas del teclado en escritorio. Cada rombo es un botón que lleva a su **Paquete de cobro**.
@@ -162,9 +202,9 @@ La forma también cambia, así que el estado se lee en escala de grises y con da
 |---|---|---|---|---|
 | Cumplida | `CheckCircle` relleno | círculo | «Cumplida» + «Ver evidencia» | Páramo |
 | En riesgo | `Warning` | triángulo | «En riesgo · vence el martes» | Ámbar |
-| Vencida | `WarningOctagon` | octágono | «Vencida hace 3 días» | Bermellón |
+| Vencida | `WarningOctagon` | octágono | «Vencida hace 3 días» | Ladrillo |
 | Pendiente | `CircleDashed` | círculo punteado | «Pendiente · 28 nov» | Pizarra |
-| Por revisar | `Eye` | — | «Por revisar · confianza baja» | Cobalto, contorno |
+| Por revisar | `Eye` | — | «Por revisar · confianza baja» | Ciruela, contorno |
 | Sin soporte | `FileDashed` | — | «Sin soporte» | Pizarra, tachado sutil del monto en informes |
 
 ---
@@ -176,7 +216,7 @@ La forma también cambia, así que el estado se lee en escala de grises y con da
 Coreografía de la lectura (cada paso lo dispara un evento real del backend por SSE; nada es simulado):
 
 1. **Página leída:** la miniatura de la página en el carril del documento pasa de gris a nítida (opacidad 0,4 → 1, en 200 ms).
-2. **Cláusula detectada:** una banda Cobalto al 12 % barre esa zona de la página (300 ms).
+2. **Cláusula detectada:** una banda Frambuesa al 12 % barre esa zona de la página (300 ms).
 3. **Obligación encontrada:** la fila entra en la lista desde abajo (8 px, 220 ms) con su chip de fuente. El contador del grupo sube con un *tick* numérico.
 4. **Fecha, hito o pago encontrado:** la **Línea se extiende** hasta esa fecha (trazo animado, 400 ms) y aparece el rombo del pago con su monto. Es el momento cumbre.
 5. **Fin:** la Línea queda completa, el marcador «Hoy» cae en su lugar y aparece el resumen («Encontré 42 obligaciones, 6 pagos y 3 pólizas. 5 necesitan tu revisión.») con el botón **Revisar lo encontrado**.
@@ -392,8 +432,9 @@ Reglas: segunda persona («tú»), sin disculpas («lo sentimos»), números con
 
 | Cliché | ¿Lo evitamos? |
 |---|---|
-| Fondo crema + serif + terracota | ✅ El fondo es frío (Niebla). La serif solo se usa para citas. No hay terracota. |
-| Negro + verde ácido | ✅ El oscuro es azul noche y el acento es cobalto. El verde Páramo es un estado, no un acento. |
+| Fondo crema + serif + terracota | ✅ El fondo es Bruma (lavanda fría). La serif solo se usa para citas. La Mandarina vive solo dentro del gradiente de la Línea. |
+| Negro + verde ácido | ✅ El oscuro es ciruela (#140A20), de la marca, y el acento es Rubor y Frambuesa. El verde Páramo es un estado, no un acento. |
+| Gradientes decorativos | ✅ Hay un único gradiente, el de marca, y significa algo: el tramo recorrido del contrato. |
 | Tarjetas idénticas con sombra y gradientes | ✅ Hay tres superficies distintas, la sombra es solo para la Hoja y no hay gradientes. |
 | Etiquetas en mayúsculas sobre títulos | ✅ Prohibido en la escala. |
 | «→» en todos los botones | ✅ Prohibido. Solo «‹» para volver. |
@@ -408,3 +449,5 @@ Reglas: segunda persona («tú»), sin disculpas («lo sentimos»), números con
   - El panel derecho de «Equipo» en Hoy escritorio compite con la Línea. Lo movería a Contratos si las pruebas lo confirman.
   - La barra segmentada del paquete de cobro duplica el «4 de 6». Una de las dos sobra.
 - **Riesgo:** la Línea puede saturarse en contratos de 24 meses con pagos quincenales. La mitigación es agrupar por mes con zoom semántico, y queda por diseñar en la fase 2.
+- **Revisión 2 (marca):** el botón primario ciruela es muy oscuro y en claro puede sentirse pesado si hay varios en pantalla. La regla «una acción por tarjeta» lo contiene. Si en pruebas pesa demasiado, la alternativa es Frambuesa como primario y el Ladrillo de «Vencida» girado a un rojo más anaranjado.
+- **Pendiente de marca:** el logo de la vista previa es un marcador de posición dibujado a mano. Hay que reemplazarlo por el SVG oficial de LiveContracts.

@@ -1,7 +1,7 @@
 # Live Contracts – Contratista · Plan de trabajo
 
 > Fase 0, reconocimiento. Documento vivo: cada fase lo actualiza.
-> Última actualización: 2026-11-08.
+> Última actualización: 2026-11-08 (dudas resueltas, revisión 2 del diseño).
 
 ## 1. Lo que encontré en el repo
 
@@ -93,20 +93,22 @@ La unidad facturable es el **contrato activo**. `Contrato` lleva `activo_desde`,
 10. **Datos personales:** la autorización de tratamiento (Ley 1581) se pide en el onboarding con casilla explícita y versión de la política registrada.
 11. **Despliegue de referencia:** contenedores. Los backups se hacen con `pg_dump` diario cifrado a S3, más un job semanal de restauración en una base efímera con *smoke test*. Queda documentado en `docs/operacion/backups.md` (fase 2).
 
-## 9. Dudas bloqueantes (máximo 5)
+## 9. Dudas bloqueantes: resueltas (8 nov 2026)
 
-1. **¿Existe código o esquema de COBRA V5 que debamos reutilizar?** Este repo (`mountsecret`) solo tiene un relato. Si hay un repo del motor, la arquitectura de §2 se adapta a él. *Mientras tanto: supuesto 1.*
-2. **¿Proveedor de modelos y residencia de datos?** Puede ser Claude API directo, Bedrock o Vertex. Afecta la transferencia internacional de datos personales bajo la Ley 1581. *Mientras tanto: API directa configurable.*
-3. **¿Nube y región objetivo?** Afecta S3, KMS y la estrategia de backups. *Mientras tanto: todo compatible con S3 y Postgres estándar.*
-4. **¿Hay lineamientos de marca de Live Contracts o INTERKONT** (logo, color, tipografía) que deban mandar sobre la propuesta de `design-system.md`? *Mientras tanto: identidad nueva.*
-5. **¿Tenemos plantillas reales** (informe de actividades, cuenta de cobro de una entidad distrital, acta parcial de obra) para calibrar el Redactor y las evals? *Mientras tanto: las fabricamos en las semillas.*
+| # | Duda | Respuesta | Decisión |
+|---|---|---|---|
+| 1 | ¿Reutilizar COBRA V5? | No. LiveContracts – Contratista se construye independiente. | Se mantiene el supuesto 1 y los nombres de los lazos, para alinear el vocabulario. |
+| 2 | ¿Proveedor de modelos? | Lo que sea mejor para probar. | **Claude API directo** para el piloto: es lo más rápido de iterar y trae los modelos y funciones más recientes. El cliente queda detrás de una interfaz `ProveedorModelo`, así que pasar a Bedrock no toca a los agentes. **Ley 1581:** la API está en EE. UU., lo que implica transmisión internacional de datos. La autorización del onboarding lo informa explícitamente, y el Lector recibe el contrato pero no los datos de PILA ni los bancarios (esos no pasan por el modelo). Para producción con datos reales se evaluará Bedrock en una región con acuerdo, si un cliente lo exige. |
+| 3 | ¿Nube y región? | Se asume AWS. | **AWS `sa-east-1` (São Paulo)**, la región completa más cercana a Colombia. Servicios: RDS PostgreSQL 16 (con pgvector), S3 con SSE-KMS, ECS Fargate (web + worker), SES para correo e Inngest Cloud para la cola en el piloto (luego self-hosted si hace falta). Backups con snapshots de RDS + `pg_dump` cifrado diario y restauración semanal de prueba. Todo local queda en `docker compose`. |
+| 4 | ¿Lineamientos de marca? | Sí: capturas de `cobrav5.netlify.app` (solo como estilo gráfico). | El design-system pasa a la **revisión 2**: Horizonte con los colores de marca (Ciruela, Frambuesa → Mandarina) y Lexend. Se descartan las mayúsculas sostenidas y los gradientes en todas partes. Ver `design-system.md` §1. **Pendiente:** el SVG oficial del logo. |
+| 5 | ¿Plantillas reales? | No; investigar y producir formatos propios. | Ver `docs/formatos.md`: informe de actividades obligación por obligación, cuenta de cobro de persona natural (PILA del mes cobrado, art. 383 ET) y acta parcial con amortización del anticipo. |
 
 ## 10. Fases y entregables
 
 | Fase | Entregable | Estado |
 |---|---|---|
 | 0 · Reconocimiento | Este documento | ✅ |
-| 1 · Diseño | `docs/design-system.md` + vista previa `docs/design-preview/` + capturas | ✅ **En espera de aprobación** |
+| 1 · Diseño | `docs/design-system.md` (rev. 2 con la marca) + vista previa + capturas + `docs/formatos.md` | ✅ Revisión 2, falta el visto bueno visual |
 | 2 · Corte vertical | Monorepo, esquema + RLS, `packages/dominio` con tests de plazos, ingesta + Lector, onboarding, lectura en vivo, validación, matriz, cronograma, Hoy y semillas con PDF | Pendiente |
 | 3 · Cumplimiento y cobro | Evidencias offline, Verificador, Perseguidor + correo, Redactor (informe), Tesorero (paquete de cobro), exportación DOCX/PDF | Pendiente |
 | 4 · v2 | Garante, Interlocutor, Abogado, Cartógrafo, Liquidador, portafolio y conectores técnicos | Pendiente |
