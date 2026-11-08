@@ -92,6 +92,7 @@ La unidad facturable es el **contrato activo**. `Contrato` lleva `activo_desde`,
 9. **El idioma del contrato** es español. El Lector traduce solo las etiquetas de UI, nunca el texto citado.
 10. **Datos personales:** la autorización de tratamiento (Ley 1581) se pide en el onboarding con casilla explícita y versión de la política registrada.
 11. **Despliegue de referencia:** contenedores. Los backups se hacen con `pg_dump` diario cifrado a S3, más un job semanal de restauración en una base efímera con *smoke test*. Queda documentado en `docs/operacion/backups.md` (fase 2).
+12. **Conteo del plazo:** el método por defecto es «inclusivo», porque es la práctica de las actas: el día del acta de inicio es el día 1, y 6 meses desde el 1 de feb terminan el 31 de jul. Se puede cambiar por contrato a «Código Civil» (art. 67: mismo número de día). El Lector marca con confianza baja los contratos que no lo dicen. Las adiciones que superan el 50 % del valor inicial generan una advertencia (Ley 80, art. 40), no un error, porque el contrato puede ser privado.
 
 ## 9. Dudas bloqueantes: resueltas (8 nov 2026)
 
@@ -109,7 +110,7 @@ La unidad facturable es el **contrato activo**. `Contrato` lleva `activo_desde`,
 |---|---|---|
 | 0 · Reconocimiento | Este documento | ✅ |
 | 1 · Diseño | `docs/design-system.md` (rev. 2 con la marca) + vista previa + capturas + `docs/formatos.md` | ✅ Revisión 2, falta el visto bueno visual |
-| 2 · Corte vertical | Monorepo, esquema + RLS, `packages/dominio` con tests de plazos, ingesta + Lector, onboarding, lectura en vivo, validación, matriz, cronograma, Hoy y semillas con PDF | Pendiente |
+| 2 · Corte vertical | Monorepo, esquema + RLS, `packages/dominio` con tests de plazos, ingesta + Lector, onboarding, lectura en vivo, validación, matriz, cronograma, Hoy y semillas con PDF | 🟡 En curso: monorepo + `packages/dominio` (festivos, hábiles, cronograma, vencimientos, semáforo, recordatorios, valor en letras, anticipo) con 83 tests en verde |
 | 3 · Cumplimiento y cobro | Evidencias offline, Verificador, Perseguidor + correo, Redactor (informe), Tesorero (paquete de cobro), exportación DOCX/PDF | Pendiente |
 | 4 · v2 | Garante, Interlocutor, Abogado, Cartógrafo, Liquidador, portafolio y conectores técnicos | Pendiente |
 

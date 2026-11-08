@@ -1,0 +1,12 @@
+{
+  "name": "live-contracts-contratista",
+  "private": true,
+  "version": "0.1.0",
+  "description": "LiveContracts – Contratista: el gemelo digital del contrato, del lado de quien lo ejecuta.",
+  "packageManager": "pnpm@10.28.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck"
+  }
+}
