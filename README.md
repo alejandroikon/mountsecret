@@ -10,13 +10,14 @@ El gemelo digital del contrato, visto desde quien lo ejecuta. Sus agentes leen e
 |---|---|
 | 0 · Reconocimiento | ✅ [`docs/plan.md`](docs/plan.md) |
 | 1 · Diseño | ✅ [`docs/design-system.md`](docs/design-system.md) · [vista previa](docs/design-preview/index.html) · [formatos](docs/formatos.md) |
-| 2 · Corte vertical | 🟡 `packages/dominio` listo con tests; sigue la app |
+| 2 · Corte vertical | 🟡 Dominio con tests + **demo navegable** ([cómo probarla y desplegarla](docs/demo.md)) |
 
 ## Desarrollo
 
 ```bash
 pnpm install
-pnpm test        # tests de dominio (festivos, plazos, cronograma, cobro)
+pnpm --filter web dev   # demo en http://localhost:3000
+pnpm test               # tests de dominio (festivos, plazos, cronograma, cobro)
 pnpm typecheck
 ```
 
@@ -25,6 +26,7 @@ Requiere Node 22 y pnpm 10.
 ## Estructura
 
 ```
+apps/web/           Demo navegable (Next.js, exportación estática para Netlify).
 packages/dominio/   Lógica pura: festivos de Colombia, días hábiles, cronograma con
                     prórrogas y suspensiones, vencimientos, semáforo, recordatorios,
                     valor en letras y amortización del anticipo.

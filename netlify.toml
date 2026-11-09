@@ -1,0 +1,17 @@
+# Demo navegable de LiveContracts – Contratista (exportación estática de Next.js).
+# Netlify: "Add new site" → "Import an existing project" → este repo y esta rama. No hay que tocar nada más.
+[build]
+  command = "pnpm install --frozen-lockfile && pnpm --filter web build"
+  publish = "apps/web/out"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "camera=(self), geolocation=(self), microphone=()"

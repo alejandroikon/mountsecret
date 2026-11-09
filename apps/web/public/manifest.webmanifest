@@ -1,0 +1,11 @@
+{
+  "name": "LiveContracts · Contratista",
+  "short_name": "LiveContracts",
+  "description": "Sube tu contrato. Nosotros nos encargamos de que lo cumplas y lo cobres.",
+  "lang": "es-CO",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f4f8",
+  "theme_color": "#1e0f2e",
+  "icons": [{ "src": "/icono.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

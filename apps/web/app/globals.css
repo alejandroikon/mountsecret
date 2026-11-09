@@ -1,0 +1,240 @@
+@import "tailwindcss";
+
+/* Tokens del sistema de diseño Horizonte · revisión 2 (docs/design-system.md §3). */
+:root {
+  --c-fondo: #f6f4f8;
+  --c-superficie: #ffffff;
+  --c-borde: #e2dce8;
+  --c-texto: #1e0f2e;
+  --c-texto-2: #5a4e66;
+  --c-accion: #1e0f2e;
+  --c-accion-texto: #ffffff;
+  --c-marca: #c8234f;
+  --c-marca-2: #d4702a;
+  --c-cumplida: #17784f;
+  --c-riesgo: #8a6200;
+  --c-vencida: #b3261e;
+  --c-cumplida-suave: #e3f2ea;
+  --c-riesgo-suave: #f8efd6;
+  --c-vencida-suave: #fae4e1;
+  --c-hoja: #ffffff;
+  --c-hoja-texto: #1e0f2e;
+  --c-resaltado: rgb(200 35 79 / 0.14);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --c-fondo: #140a20;
+    --c-superficie: #21132f;
+    --c-borde: #3a2a4a;
+    --c-texto: #f3eef6;
+    --c-texto-2: #b8abc6;
+    --c-accion: #f7c6d6;
+    --c-accion-texto: #140a20;
+    --c-marca: #ff7a9c;
+    --c-marca-2: #f59a5b;
+    --c-cumplida: #5ccb97;
+    --c-riesgo: #e9bc4f;
+    --c-vencida: #ff8a78;
+    --c-cumplida-suave: #12332a;
+    --c-riesgo-suave: #3a2e0e;
+    --c-vencida-suave: #3d1b18;
+    --c-hoja: #f7f8fa;
+    --c-hoja-texto: #1e0f2e;
+    --c-resaltado: rgb(200 35 79 / 0.16);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --c-fondo: #140a20;
+  --c-superficie: #21132f;
+  --c-borde: #3a2a4a;
+  --c-texto: #f3eef6;
+  --c-texto-2: #b8abc6;
+  --c-accion: #f7c6d6;
+  --c-accion-texto: #140a20;
+  --c-marca: #ff7a9c;
+  --c-marca-2: #f59a5b;
+  --c-cumplida: #5ccb97;
+  --c-riesgo: #e9bc4f;
+  --c-vencida: #ff8a78;
+  --c-cumplida-suave: #12332a;
+  --c-riesgo-suave: #3a2e0e;
+  --c-vencida-suave: #3d1b18;
+  --c-hoja: #f7f8fa;
+  --c-hoja-texto: #1e0f2e;
+  --c-resaltado: rgb(200 35 79 / 0.16);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-fondo: var(--c-fondo);
+  --color-superficie: var(--c-superficie);
+  --color-borde: var(--c-borde);
+  --color-texto: var(--c-texto);
+  --color-texto-2: var(--c-texto-2);
+  --color-accion: var(--c-accion);
+  --color-accion-texto: var(--c-accion-texto);
+  --color-marca: var(--c-marca);
+  --color-marca-2: var(--c-marca-2);
+  --color-cumplida: var(--c-cumplida);
+  --color-riesgo: var(--c-riesgo);
+  --color-vencida: var(--c-vencida);
+  --color-cumplida-suave: var(--c-cumplida-suave);
+  --color-riesgo-suave: var(--c-riesgo-suave);
+  --color-vencida-suave: var(--c-vencida-suave);
+  --color-hoja: var(--c-hoja);
+  --color-hoja-texto: var(--c-hoja-texto);
+  --color-resaltado: var(--c-resaltado);
+  --font-cifra: var(--fuente-cifra), system-ui, sans-serif;
+  --font-ui: var(--fuente-ui), system-ui, sans-serif;
+  --font-cita: var(--fuente-cita), Georgia, serif;
+}
+
+/* Escala tipográfica (design-system §4). Base 17 px. */
+@utility cifra-xl {
+  font-family: var(--font-cifra);
+  font-weight: 700;
+  font-size: 2.75rem;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+@utility titulo-1 {
+  font-family: var(--font-cifra);
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+@utility titulo-2 {
+  font-family: var(--font-cifra);
+  font-weight: 600;
+  font-size: 1.3125rem;
+  line-height: 1.33;
+}
+@utility titulo-3 {
+  font-weight: 600;
+  font-size: 1.1875rem;
+  line-height: 1.4;
+}
+@utility apoyo {
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--c-texto-2);
+}
+@utility num {
+  font-variant-numeric: tabular-nums;
+}
+
+html {
+  font-size: 106.25%; /* 17 px */
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  background: var(--c-fondo);
+  color: var(--c-texto);
+  font-family: var(--font-ui);
+  line-height: 1.53;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Foco visible y consistente (WCAG 2.4.7 / 2.4.11). */
+:focus-visible {
+  outline: 3px solid var(--c-marca);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3.25rem;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  background: var(--c-accion);
+  color: var(--c-accion-texto);
+  transition: transform 120ms ease-out, opacity 120ms ease-out;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-sec {
+  background: transparent;
+  color: var(--c-texto);
+  border: 1.5px solid var(--c-borde);
+}
+.btn-sec:hover {
+  border-color: var(--c-texto-2);
+}
+.enlace {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--c-borde);
+  text-underline-offset: 3px;
+}
+.enlace:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Superficies (design-system §5): Lámina, Tarea y Hoja. */
+.lamina {
+  background: var(--c-superficie);
+  border: 1px solid var(--c-borde);
+  border-radius: 12px;
+}
+.tarea {
+  position: relative;
+  background: var(--c-superficie);
+  border: 1px solid var(--c-borde);
+  border-radius: 12px;
+  padding: 1rem 1rem 1rem 1.25rem;
+}
+.tarea::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 4px;
+  border-radius: 0 4px 4px 0;
+  background: var(--rail, var(--c-texto-2));
+}
+.hoja {
+  background: var(--c-hoja);
+  color: var(--c-hoja-texto);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgb(30 15 46 / 0.08), 0 4px 16px rgb(30 15 46 / 0.08);
+}
+
+.gradiente-marca {
+  background: linear-gradient(90deg, var(--c-marca), var(--c-marca-2));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.sr-only-focusable:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

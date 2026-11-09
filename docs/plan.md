@@ -110,7 +110,7 @@ La unidad facturable es el **contrato activo**. `Contrato` lleva `activo_desde`,
 |---|---|---|
 | 0 · Reconocimiento | Este documento | ✅ |
 | 1 · Diseño | `docs/design-system.md` (rev. 2 con la marca) + vista previa + capturas + `docs/formatos.md` | ✅ Revisión 2, falta el visto bueno visual |
-| 2 · Corte vertical | Monorepo, esquema + RLS, `packages/dominio` con tests de plazos, ingesta + Lector, onboarding, lectura en vivo, validación, matriz, cronograma, Hoy y semillas con PDF | 🟡 En curso: monorepo + `packages/dominio` (festivos, hábiles, cronograma, vencimientos, semáforo, recordatorios, valor en letras, anticipo) con 83 tests en verde |
+| 2 · Corte vertical | Monorepo, esquema + RLS, `packages/dominio` con tests de plazos, ingesta + Lector, onboarding, lectura en vivo, validación, matriz, cronograma, Hoy y semillas con PDF | 🟡 En curso. ✅ `packages/dominio` con 83 tests. ✅ **Demo navegable** (`apps/web`, exportación estática para Netlify): onboarding, lectura en vivo, validación, Hoy, contrato (matriz, cronograma, pagos, pólizas, documentos), visor de fuente, evidencias offline, paquete de cobro y Preguntar. Ver `docs/demo.md`. ⏳ Falta la parte real: base de datos con RLS, Lector con Claude, auth con MFA y PDF semilla generados. |
 | 3 · Cumplimiento y cobro | Evidencias offline, Verificador, Perseguidor + correo, Redactor (informe), Tesorero (paquete de cobro), exportación DOCX/PDF | Pendiente |
 | 4 · v2 | Garante, Interlocutor, Abogado, Cartógrafo, Liquidador, portafolio y conectores técnicos | Pendiente |
 
